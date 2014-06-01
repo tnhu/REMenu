@@ -4,7 +4,6 @@ Custom version of [REMenu](https://github.com/romaonthego) focusing on custom UI
 * Custom menu height
 * Scrollable menu content
 
-<img src="https://github.com/tnhu/REMenu/raw/master/Screenshot.png" alt="REMenu Screenshot" width="400" height="568" />
 <img src="https://github.com/tnhu/REMenu/raw/master/Demo.gif" alt="REMenu Screenshot" width="320" height="568" />
 
 ## Requirements
