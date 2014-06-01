@@ -8,18 +8,21 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
-#import "NavigationViewController.h"
-#import "HomeViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[NavigationViewController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+  UIViewController *home                        = [[RootViewController alloc] init];
+  home.tabBarItem                               = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:1];
+
+  UITabBarController *dashboardTabBarController = [[UITabBarController alloc] init];
+  dashboardTabBarController.viewControllers     = @[ [[UINavigationController alloc] initWithRootViewController:home] ];
+
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  self.window.rootViewController = dashboardTabBarController;
+  [self.window makeKeyAndVisible];
+  return YES;
 }
 
 @end
