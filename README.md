@@ -58,6 +58,14 @@ Which toggleLeftMenu implemented as:
 }
 ```
 
+### Hide menu from anywhere
+
+``` objective-c
+[[NSNotificationCenter defaultCenter] postNotificationName:kCloseSlidedownMenuWithCompletion object:^(void) {
+  NSLog(@"Do something when menu finishes closing...");
+}];
+```
+
 ## Customization
 
 You can customize the following properties of `REMenu`:

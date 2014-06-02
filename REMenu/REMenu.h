@@ -26,6 +26,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#define kCloseSlidedownMenuWithCompletion @"kCloseSlidedownMenuWithCompletion"
+
 @interface REMenu : NSObject
 
 @property (assign,  readonly,   nonatomic) BOOL   isOpen;

@@ -20,6 +20,7 @@
 		30E0F7AC16D54641001949EA /* REMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0F7A716D54641001949EA /* REMenu.m */; };
 		30E405CC181581B200C6B0F4 /* Balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E405CB181581B200C6B0F4 /* Balloon@2x.png */; };
 		A4B802D01939F6AE0006E851 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B802CF1939F6AE0006E851 /* Storyboard.storyboard */; };
+		A4B802D6193C14960006E851 /* REMainMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B802D5193C14960006E851 /* REMainMenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		30E0F7A716D54641001949EA /* REMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REMenu.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		30E405CB181581B200C6B0F4 /* Balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon@2x.png"; sourceTree = "<group>"; };
 		A4B802CF1939F6AE0006E851 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		A4B802D4193C14960006E851 /* REMainMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMainMenuTableViewController.h; sourceTree = "<group>"; };
+		A4B802D5193C14960006E851 /* REMainMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMainMenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				30B00DCE17CCFD280010D439 /* Controllers */,
 				30E0F78416D545F7001949EA /* Supporting Files */,
 				A4B802CF1939F6AE0006E851 /* Storyboard.storyboard */,
+				A4B802D4193C14960006E851 /* REMainMenuTableViewController.h */,
+				A4B802D5193C14960006E851 /* REMainMenuTableViewController.m */,
 			);
 			path = REMenuExample;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B802D6193C14960006E851 /* REMainMenuTableViewController.m in Sources */,
 				30E0F78A16D545F7001949EA /* main.m in Sources */,
 				30E0F78E16D545F7001949EA /* AppDelegate.m in Sources */,
 				30E0F7AC16D54641001949EA /* REMenu.m in Sources */,

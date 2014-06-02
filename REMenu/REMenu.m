@@ -83,11 +83,20 @@
   }
 }
 
+- (void)selectorCloseMenu:(NSNotification*)notification
+{
+  void (^completion)(void) = notification.object;
+  
+  [self closeWithCompletion:completion];
+}
+
 - (void)showFromRect:(CGRect)rect inView:(UIView*)view
 {
   if (self.isAnimating) {
     return;
   }
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectorCloseMenu:) name:kCloseSlidedownMenuWithCompletion object:nil];
   
   self.isOpen      = YES;
   self.isAnimating = YES;
@@ -157,8 +166,8 @@
   [self.menuView addSubview:self.viewController.view];
   
   [self.menuWrapperView addSubview:self.menuView];
-  [self.containerView addSubview:self.backgroundButton];
-  [self.containerView addSubview:self.menuWrapperView];
+  [self.containerView   addSubview:self.backgroundButton];
+  [self.containerView   addSubview:self.menuWrapperView];
   [view addSubview:self.containerView];
   
   // Animate appearance
@@ -235,7 +244,9 @@
   if (self.isAnimating) {
     return;
   }
-    
+
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+  
   self.isAnimating = YES;
   
   CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? 64 : 0;
